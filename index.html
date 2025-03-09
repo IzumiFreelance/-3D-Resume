@@ -4,139 +4,155 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Altaf Hussain</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #1a374d, #406882);
-            color: white;
-        }
+  <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1a374d, #406882);
+    color: white;
+}
 
-        .resume-container {
-            display: flex;
-            max-width: 1100px;
-            margin: 50px auto;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            position: relative;
-        }
+.resume-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1100px;
+    margin: 20px auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    position: relative;
+}
 
-        .left-column {
-            background: linear-gradient(135deg, #0f2027, #1a374d);
-            padding: 20px;
-            width: 300px;
-            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
-        }
+.left-column,
+.right-column {
+    padding: 20px;
+    width: 100%;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
 
-        .right-column {
-            padding: 20px;
-            flex-grow: 1;
-            background: linear-gradient(135deg, #ffffff, #f0f0f0);
-            color: #333;
-            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
-        }
+.left-column {
+    background: linear-gradient(135deg, #0f2027, #1a374d);
+}
 
-        .qr-code {
-            width: 100%;
-            max-width: 150px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            cursor: pointer;
-        }
+.right-column {
+    background: linear-gradient(135deg, #ffffff, #f0f0f0);
+    color: #333;
+    flex-grow: 1;
+}
 
-        h1 {
-            font-size: 36px;
-            margin-bottom: 10px;
-            color: #1a374d;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-        }
+.qr-code {
+    width: 100%;
+    max-width: 150px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
 
-        h2 {
-            color: #f8f9fa;
-            border-bottom: 2px solid #406882;
-            padding-bottom: 5px;
-            margin-top: 20px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #1a374d;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
 
-        .contact-item {
-            margin-bottom: 10px;
-            font-size: 14px;
-        }
+h2 {
+    color: #f8f9fa;
+    border-bottom: 2px solid #406882;
+    padding-bottom: 5px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
 
-        .skills-list {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
+.contact-item,
+.skills-list li {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
 
-        .skills-list li {
-            margin-bottom: 8px;
-            font-size: 14px;
-            background: #1a374d;
-            padding: 5px 10px;
-            border-radius: 5px;
-            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
-        }
+.skills-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
 
-        p {
-            line-height: 1.6;
-        }
+.skills-list li {
+    background: #1a374d;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+}
 
-        ul {
-            margin: 0;
-            padding-left: 20px;
-        }
+p {
+    line-height: 1.6;
+}
 
-        ul li {
-            margin-bottom: 10px;
-            position: relative;
-        }
+ul {
+    margin: 0;
+    padding-left: 20px;
+}
 
-        ul li::before {
-            content: '\2022';
-            color: #1a374d;
-            font-weight: bold;
-            display: inline-block;
-            width: 1em;
-            margin-left: -1em;
-        }
+ul li {
+    margin-bottom: 10px;
+    position: relative;
+}
 
-        footer {
-            background: #1a374d;
-            padding: 20px 0;
-            text-align: center;
-            color: white;
-            margin-top: 50px;
-            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.5);
-        }
+ul li::before {
+    content: '\2022';
+    color: #1a374d;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
 
-        footer .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
+footer {
+    background: #1a374d;
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+    margin-top: 50px;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.5);
+}
 
-        footer .social-icons a {
-            color: white;
-            font-size: 24px;
-            transition: color 0.3s;
-        }
+footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
 
-        footer .social-icons a:hover {
-            color: #406882;
-        }
+footer .social-icons a {
+    color: white;
+    font-size: 24px;
+    transition: color 0.3s;
+}
 
-        footer p {
-            margin: 10px 0 0;
-            font-size: 14px;
-        }
+footer .social-icons a:hover {
+    color: #406882;
+}
+
+footer p {
+    margin: 10px 0 0;
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    .resume-container {
+        flex-direction: row;
+    }
+
+    .left-column {
+        width: 300px;
+    }
+
+    .right-column {
+        flex-grow: 1;
+    }
+}
 
     </style>
 </head>
