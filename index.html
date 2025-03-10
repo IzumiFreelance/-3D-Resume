@@ -17,34 +17,30 @@
             width: 800px;
             max-width: 100%;
             margin: 20px auto;
-            padding: 15px;
+            padding: 20px;
             background: white;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            font-size: 10px;
         }
         .header h1 {
-            font-size: 18px;
-            margin-bottom: 5px;
+            font-size: 22px;
         }
         .header p {
-            font-size: 10px;
+            font-size: 12px;
         }
         .section h2 {
-            font-size: 12px;
+            font-size: 16px;
             border-bottom: 1px solid #333;
-            padding-bottom: 2px;
-            margin-bottom: 5px;
+            padding-bottom: 3px;
         }
         .section p, .section li {
-            font-size: 10px;
-            margin: 2px 0;
+            font-size: 12px;
         }
         .download-btn {
             display: block;
             width: 200px;
-            margin: 10px auto;
-            padding: 8px;
-            font-size: 12px;
+            margin: 20px auto;
+            padding: 10px;
+            font-size: 14px;
             text-align: center;
             background: #007bff;
             color: white;
@@ -55,9 +51,10 @@
         .download-btn:hover {
             background: #0056b3;
         }
+        /* Ensure everything is scaled to fit a single A4 page */
         @media print {
             body {
-                zoom: 0.75;
+                zoom: 0.8; /* Adjust this if needed */
             }
         }
     </style>
@@ -70,39 +67,52 @@
         </div>
         <div class="section">
             <h2>Contact</h2>
-            <p>📞 03420781798 | 📧 IzumiFreelance@gmail.com | 📍 Gilgit, Pakistan</p>
+            <p>📞 03420781798 |</br> 📧 IzumiFreelance@gmail.com |</br> 📍 Pakistan, Gilgit</p>
         </div>
         <div class="section">
             <h2>Summary</h2>
-            <p>Specializing in high-performance web applications using React 18+, Next.js 14, TypeScript, and Webflow.</p>
+            <p>
+                Specializing in high-performance, user-centric web applications using React 18+, Next.js 14, TypeScript, Webflow,</br> and API integration. Skilled in building scalable, SEO-friendly, and fast applications with micro-frontends, AI modules, and JAMstack.
+            </p>
         </div>
         <div class="section">
             <h2>Experience</h2>
-            <p><strong>Intern - Techzoid (2023-2024)</strong></p>
-            <p>Developed websites, optimized performance, and integrated APIs.</p>
-            <p><strong>Freelance Web Developer (2022 - Present)</strong></p>
-            <p>Built client projects, ensuring functionality and SEO optimization.</p>
+            <ul>
+                <h4><strong>Web Developer (Intern)</strong> - Techzoid (2023-2024)</h4>
+                <p>Designed responsive websites using React.js and other frameworks.</p>
+                <p>Developed and maintained server-side applications with Node.js.</p>
+                <p>Optimized performance and ensured cross-browser compatibility.</p>
+                <p>Integrated RESTful APIs and managed version control with Git.</p>
+                <p>Used AI as a co-pilot for efficiency.</p>
+                <h4><strong>Freelance Web Developer</strong> (2022 - Present)</h4>
+                <p>Worked on multiple client projects to deliver fully functional and visually appealing websites.</p>
+                <p>Utilized modern front-end frameworks such as React.js and Vue.js.</p>
+                <p>Collaborated with clients to understand project requirements and timelines.</p>
+                <p>Ensured SEO optimization and enhanced web accessibility.</p>
+            </ul>
         </div>
         <div class="section">
             <h2>Education</h2>
-            <p>Computer Science (In Progress)</p>
+             <p style="margin-left: 3em">Computer Science Student (In Progress)</p>
         </div>
         <div class="section">
             <h2>Certificates</h2>
-            <p>Microsoft Excel & Access, Front-end Web Development, Webflow Certified</p>
+            <p style="margin-left: 3em">Microsoft Excel & Access,</br> Front-end Web Development,</br> Responsive Web Design,</br> Webflow Certified</p>
         </div>
         <div class="section">
             <h2>Skills</h2>
-            <p>React.js, Webflow, API Integration, Git, Web Security</p>
+            <p style="margin-left: 3em">React.js,</br> Webflow,</br> API Integration,</br> Git,</br> Web Security,</br> Troubleshooting</p>
         </div>
         <div class="section">
             <h2>Languages</h2>
-            <p>English (Fluent), Japanese (Basic), Urdu (Fluent)</p>
+            <p style="margin-left: 3em">English (Fluent),</br> Japanese (Basic),</br> Urdu (Fluent)</p>
         </div>
         <div class="section">
             <h2>Projects</h2>
-            <p><strong>Real-Time Chat App:</strong> WebSocket, React.js, User Authentication</p>
-            <p><strong>E-Commerce Website:</strong> Next.js, Stripe Payments</p>
+            <ul>
+                <li><strong>Real-Time Chat App:</strong> WebSocket, React.js, User Authentication</li>
+                <li><strong>E-Commerce Website:</strong> Next.js, Stripe Payments</li>
+            </ul>
         </div>
     </div>
 
@@ -112,13 +122,16 @@
         function downloadPDF() {
             const element = document.getElementById('resume');
             const opt = {
-                margin: 0,
+                margin: 5,
                 filename: 'Altaf_Hussain_Resume.pdf',
                 image: { type: 'jpeg', quality: 1 },
                 html2canvas: { scale: 2 },
                 jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
             };
-            html2pdf().set(opt).from(element).save();
+            html2pdf().set(opt).from(element).toPdf().get('pdf').then(function(pdf) {
+                pdf.internal.scaleFactor = 1.5; // Scale down content
+                pdf.save();
+            });
         }
     </script>
 </body>
