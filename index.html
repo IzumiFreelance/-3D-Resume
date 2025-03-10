@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Altaf Hussain - Web Developer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -55,10 +56,26 @@
         .experience ul li, .education ul li, .certificates ul li, .projects ul li, .achievements ul li, .interests ul li {
             margin-bottom: 10px;
         }
+        .download-btn {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            font-size: 16px;
+            text-align: center;
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .download-btn:hover {
+            background: #0056b3;
+        }
     </style>
 </head>
 <body>
-    <div class="resume-container">
+    <div class="resume-container" id="resume">
         <div class="header">
             <h1>Altaf Hussain</h1>
             <p>Web Developer</p>
@@ -72,7 +89,8 @@
         <div class="section">
             <h2>Summary</h2>
             <p>
-I specialize in building high-performance, user-centric web applications using modern frameworks like React 18+, Next.js 14, and TypeScript, along with Webflow and Api handy work for visually stunning designs. My expertise lies in turning complex ideas into scalable, SEO-friendly, and lightning-fast solutions powered by serverless architectures, micro-frontends, AI modules and JAMstack.</p>
+                I specialize in building high-performance, user-centric web applications using modern frameworks like React 18+, Next.js 14, and TypeScript, along with Webflow and API handy work for visually stunning designs. My expertise lies in turning complex ideas into scalable, SEO-friendly, and lightning-fast solutions powered by serverless architectures, micro-frontends, AI modules, and JAMstack.
+            </p>
         </div>
         <div class="section experience">
             <h2>Experience</h2>
@@ -110,12 +128,12 @@ I specialize in building high-performance, user-centric web applications using m
                 <li>Basic Backend Development</li>
                 <li>Responsive Web Design</li>
                 <li>Webflow Certified</li>
-                <li>Basic Ui/Ux</li>
+                <li>Basic UI/UX</li>
             </ul>
         </div>
         <div class="section skills">
             <h2>Skills</h2>
-            <ul class="skills">
+            <ul>
                 <li>Front-end web development</li>
                 <li>React.js framework</li>
                 <li>Webflow</li>
@@ -133,7 +151,7 @@ I specialize in building high-performance, user-centric web applications using m
         </div>
         <div class="section languages">
             <h2>Languages</h2>
-            <ul class="languages">
+            <ul>
                 <li>English (Fluent)</li>
                 <li>Japanese (Basic)</li>
                 <li>Urdu (Fluent)</li>
@@ -154,31 +172,15 @@ I specialize in building high-performance, user-centric web applications using m
                 </li>
             </ul>
         </div>
-        <div class="section achievements">
-            <h2>Achievements</h2>
-            <ul>
-                <li><strong>Hackathon Winner</strong>
-                    <ul>
-                        <li>Won first place in a local hackathon for developing an innovative web application that uses AI to optimize user experience.</li>
-                    </ul>
-                </li>
-                <li><strong>Open Source Contributor</strong>
-                    <ul>
-                        <li>Contributed to several open-source projects, including a popular React component library and a backend framework.</li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-        <div class="section interests">
-            <h2>Interests</h2>
-            <ul>
-                <li><strong>AI and Machine Learning</strong>
-                    <ul>
-                        <li>Exploring the integration of AI and machine learning in web development to create smarter and more intuitive applications.</li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
     </div>
+
+    <button class="download-btn" onclick="downloadPDF()">Download as PDF</button>
+
+    <script>
+        function downloadPDF() {
+            const element = document.getElementById('resume');
+            html2pdf().from(element).save('Altaf_Hussain_Resume.pdf');
+        }
+    </script>
 </body>
 </html>
