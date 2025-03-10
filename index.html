@@ -14,54 +14,33 @@
             color: #333;
         }
         .resume-container {
-            max-width: 800px;
+            width: 800px;
+            max-width: 100%;
             margin: 20px auto;
             padding: 20px;
             background: white;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        .header, .section {
-            margin-bottom: 20px;
-        }
         .header h1 {
-            margin: 0;
-            font-size: 28px;
+            font-size: 22px;
         }
         .header p {
-            margin: 5px 0 0;
-            font-size: 14px;
+            font-size: 12px;
         }
         .section h2 {
-            margin: 0 0 10px;
-            font-size: 20px;
-            border-bottom: 2px solid #333;
-            padding-bottom: 5px;
+            font-size: 16px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 3px;
         }
-        .section ul {
-            list-style: none;
-            padding: 0;
-        }
-        .section ul li {
-            margin-bottom: 10px;
-        }
-        .contact-info, .skills, .languages {
-            margin-bottom: 20px;
-        }
-        .contact-info div, .skills li, .languages li {
-            font-size: 14px;
-        }
-        .experience ul, .education ul, .certificates ul, .projects ul, .achievements ul, .interests ul {
-            padding-left: 20px;
-        }
-        .experience ul li, .education ul li, .certificates ul li, .projects ul li, .achievements ul li, .interests ul li {
-            margin-bottom: 10px;
+        .section p, .section li {
+            font-size: 12px;
         }
         .download-btn {
             display: block;
             width: 200px;
             margin: 20px auto;
             padding: 10px;
-            font-size: 16px;
+            font-size: 14px;
             text-align: center;
             background: #007bff;
             color: white;
@@ -72,6 +51,12 @@
         .download-btn:hover {
             background: #0056b3;
         }
+        /* Ensure everything is scaled to fit a single A4 page */
+        @media print {
+            body {
+                zoom: 0.8; /* Adjust this if needed */
+            }
+        }
     </style>
 </head>
 <body>
@@ -80,96 +65,44 @@
             <h1>Altaf Hussain</h1>
             <p>Web Developer</p>
         </div>
-        <div class="contact-info">
+        <div class="section">
             <h2>Contact</h2>
-            <div>03420781798</div>
-            <div>IzumiFreelance@gmail.com</div>
-            <div>Pakistan, Gilgit</div>
+            <p>📞 03420781798 | 📧 IzumiFreelance@gmail.com | 📍 Pakistan, Gilgit</p>
         </div>
         <div class="section">
             <h2>Summary</h2>
             <p>
-                I specialize in building high-performance, user-centric web applications using modern frameworks like React 18+, Next.js 14, and TypeScript, along with Webflow and API handy work for visually stunning designs. My expertise lies in turning complex ideas into scalable, SEO-friendly, and lightning-fast solutions powered by serverless architectures, micro-frontends, AI modules, and JAMstack.
+                Specializing in high-performance, user-centric web applications using React 18+, Next.js 14, TypeScript, Webflow, and API integration. Skilled in building scalable, SEO-friendly, and fast applications with micro-frontends, AI modules, and JAMstack.
             </p>
         </div>
-        <div class="section experience">
+        <div class="section">
             <h2>Experience</h2>
             <ul>
-                <li><strong>Web Developer (Intern)</strong> - Techzoid (7-1-2023 to 12-1-2024)
-                    <ul>
-                        <li>Designed responsive websites using React.js and other frameworks.</li>
-                        <li>Developed and maintained server-side applications with Node.js.</li>
-                        <li>Optimized performance and ensured cross-browser compatibility.</li>
-                        <li>Integrated RESTful APIs and managed version control with Git.</li>
-                        <li>Used AI as a co-pilot for efficiency.</li>
-                    </ul>
-                </li>
-                <li><strong>Freelance Web Developer</strong> (2022 - Present)
-                    <ul>
-                        <li>Worked on multiple client projects to deliver fully functional and visually appealing websites.</li>
-                        <li>Utilized modern front-end frameworks such as React.js and Vue.js.</li>
-                        <li>Collaborated with clients to understand project requirements and timelines.</li>
-                        <li>Ensured SEO optimization and enhanced web accessibility.</li>
-                    </ul>
-                </li>
+                <li><strong>Web Developer (Intern)</strong> - Techzoid (2023-2024)</li>
+                <li><strong>Freelance Web Developer</strong> (2022 - Present)</li>
             </ul>
         </div>
-        <div class="section education">
+        <div class="section">
             <h2>Education</h2>
-            <ul>
-                <li>Student of Computer Science (In Progress)</li>
-            </ul>
+            <p>Computer Science Student (In Progress)</p>
         </div>
-        <div class="section certificates">
+        <div class="section">
             <h2>Certificates</h2>
-            <ul>
-                <li>Microsoft Excel & Microsoft Access Certification</li>
-                <li>Front-end Web Development (2)</li>
-                <li>Basic Backend Development</li>
-                <li>Responsive Web Design</li>
-                <li>Webflow Certified</li>
-                <li>Basic UI/UX</li>
-            </ul>
+            <p>Microsoft Excel & Access, Front-end Web Development, Responsive Web Design, Webflow Certified</p>
         </div>
-        <div class="section skills">
+        <div class="section">
             <h2>Skills</h2>
-            <ul>
-                <li>Front-end web development</li>
-                <li>React.js framework</li>
-                <li>Webflow</li>
-                <li>TSX</li>
-                <li>API Integration and management</li>
-                <li>Cross-browser compatibility</li>
-                <li>Effective communication skills</li>
-                <li>Troubleshooting and debugging</li>
-                <li>Resolving technical issues</li>
-                <li>Web Security Knowledge</li>
-                <li>Version Control (Git)</li>
-                <li>Proficient in HTML, CSS, and JavaScript</li>
-                <li>Basic understanding of cloud platforms (AWS, Azure)</li>
-            </ul>
+            <p>React.js, Webflow, API Integration, Git, Web Security, Troubleshooting</p>
         </div>
-        <div class="section languages">
+        <div class="section">
             <h2>Languages</h2>
-            <ul>
-                <li>English (Fluent)</li>
-                <li>Japanese (Basic)</li>
-                <li>Urdu (Fluent)</li>
-            </ul>
+            <p>English (Fluent), Japanese (Basic), Urdu (Fluent)</p>
         </div>
-        <div class="section projects">
+        <div class="section">
             <h2>Projects</h2>
             <ul>
-                <li><strong>Real-Time Chat Application</strong>
-                    <ul>
-                        <li>Developed a real-time chat application using WebSocket and React.js. The application supports multiple users and features like message history and user authentication.</li>
-                    </ul>
-                </li>
-                <li><strong>E-Commerce Website</strong>
-                    <ul>
-                        <li>Built a fully functional e-commerce website using Next.js and Stripe for payment processing. The website includes features like product search, user reviews, and a shopping cart.</li>
-                    </ul>
-                </li>
+                <li><strong>Real-Time Chat App:</strong> WebSocket, React.js, User Authentication</li>
+                <li><strong>E-Commerce Website:</strong> Next.js, Stripe Payments</li>
             </ul>
         </div>
     </div>
@@ -179,7 +112,17 @@
     <script>
         function downloadPDF() {
             const element = document.getElementById('resume');
-            html2pdf().from(element).save('Altaf_Hussain_Resume.pdf');
+            const opt = {
+                margin: 5,
+                filename: 'Altaf_Hussain_Resume.pdf',
+                image: { type: 'jpeg', quality: 1 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+            html2pdf().set(opt).from(element).toPdf().get('pdf').then(function(pdf) {
+                pdf.internal.scaleFactor = 1.5; // Scale down content
+                pdf.save();
+            });
         }
     </script>
 </body>
