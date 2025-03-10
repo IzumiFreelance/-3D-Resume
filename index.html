@@ -1,159 +1,173 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Altaf Hussain</title>
-  <style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(135deg, #1a374d, #406882);
-    color: white;
-}
+    <title>Altaf Hussain - Web Developer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1a374d, #406882);
+            color: white;
+        }
 
-.resume-container {
-    display: flex;
-    flex-direction: column;
-    max-width: 1100px;
-    margin: 20px auto;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    position: relative;
-}
+        .resume-container {
+            display: flex;
+            flex-direction: column;
+            max-width: 1100px;
+            margin: 20px auto;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            position: relative;
+        }
 
-.left-column,
-.right-column {
-    padding: 20px;
-    width: 100%;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
-}
+        .left-column, .right-column {
+            padding: 20px;
+            width: 100%;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+        }
 
-.left-column {
-    background: linear-gradient(135deg, #0f2027, #1a374d);
-}
+        .left-column {
+            background: linear-gradient(135deg, #0f2027, #1a374d);
+        }
 
-.right-column {
-    background: linear-gradient(135deg, #ffffff, #f0f0f0);
-    color: #333;
-    flex-grow: 1;
-}
+        .right-column {
+            background: linear-gradient(135deg, #ffffff, #f0f0f0);
+            color: #333;
+            flex-grow: 1;
+        }
 
-.qr-code {
-    width: 100%;
-    max-width: 150px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-}
+        .qr-code {
+            width: 100%;
+            max-width: 150px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+        }
 
-h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
-    color: #1a374d;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-}
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            color: #1a374d;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
 
-h2 {
-    color: #f8f9fa;
-    border-bottom: 2px solid #406882;
-    padding-bottom: 5px;
-    margin-top: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
+        h2 {
+            color: #f8f9fa;
+            border-bottom: 2px solid #406882;
+            padding-bottom: 5px;
+            margin-top: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
 
-.contact-item,
-.skills-list li {
-    margin-bottom: 10px;
-    font-size: 14px;
-}
+        .contact-item, .skills-list li {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
 
-.skills-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
+        .skills-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
 
-.skills-list li {
-    background: #1a374d;
-    padding: 5px 10px;
-    border-radius: 5px;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
-}
+        .skills-list li {
+            background: #1a374d;
+            padding: 5px 10px;
+            border-radius: 5px;
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+        }
 
-p {
-    line-height: 1.6;
-}
+        p {
+            line-height: 1.6;
+        }
 
-ul {
-    margin: 0;
-    padding-left: 20px;
-}
+        ul {
+            margin: 0;
+            padding-left: 20px;
+        }
 
-ul li {
-    margin-bottom: 10px;
-    position: relative;
-}
+        ul li {
+            margin-bottom: 10px;
+            position: relative;
+        }
 
-ul li::before {
-    content: '\2022';
-    color: #1a374d;
-    font-weight: bold;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
-}
+        ul li::before {
+            content: '\2022';
+            color: #1a374d;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
 
-footer {
-    background: #1a374d;
-    padding: 20px 0;
-    text-align: center;
-    color: white;
-    margin-top: 50px;
-    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.5);
-}
+        footer {
+            background: #1a374d;
+            padding: 20px 0;
+            text-align: center;
+            color: white;
+            margin-top: 50px;
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.5);
+        }
 
-footer .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
+        footer .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
 
-footer .social-icons a {
-    color: white;
-    font-size: 24px;
-    transition: color 0.3s;
-}
+        footer .social-icons a {
+            color: white;
+            font-size: 24px;
+            transition: color 0.3s;
+        }
 
-footer .social-icons a:hover {
-    color: #406882;
-}
+        footer .social-icons a:hover {
+            color: #406882;
+        }
 
-footer p {
-    margin: 10px 0 0;
-    font-size: 14px;
-}
+        footer p {
+            margin: 10px 0 0;
+            font-size: 14px;
+        }
 
-@media (min-width: 768px) {
-    .resume-container {
-        flex-direction: row;
-    }
+        @media (min-width: 768px) {
+            .resume-container {
+                flex-direction: row;
+            }
 
-    .left-column {
-        width: 300px;
-    }
+            .left-column {
+                width: 300px;
+            }
 
-    .right-column {
-        flex-grow: 1;
-    }
-}
+            .right-column {
+                flex-grow: 1;
+            }
+        }
 
+        /* Additional Styles for New Sections */
+        .project-item, .achievement-item, .interest-item {
+            margin-bottom: 20px;
+        }
+
+        .project-item h3, .achievement-item h3, .interest-item h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: #1a374d;
+        }
+
+        .project-item p, .achievement-item p, .interest-item p {
+            font-size: 14px;
+            color: #555;
+        }
     </style>
 </head>
 <body>
@@ -168,15 +182,14 @@ footer p {
             <h2>CONTACT</h2>
             <div class="contact-item">03420781798</div>
             <div class="contact-item">IzumiFreelance@gmail.com</div>
-            <div class="contact-item">Pakistan,Gilgit</div>
-<a href="https://altafhussain.vercel.app/" target="_blank" style="display: inline-block; color: blue; text-decoration: none;">PortFolio</a><li></li>
-</a>
+            <div class="contact-item">Pakistan, Gilgit</div>
+            <a href="https://altafhussain.vercel.app/" target="_blank" style="display: inline-block; color: blue; text-decoration: none;">PortFolio</a>
 
             <h2>EDUCATION</h2>
             <div>In Progress</div>
             <br>
             <div>Student of</div>
-            <div>Computer science</div>
+            <div>Computer Science</div>
 
             <h2>SKILLS</h2>
             <ul class="skills-list">
@@ -209,7 +222,7 @@ footer p {
             <div>WEB DEVELOPER</div>
 
             <h2 style="color: #0f2027;">PROFILE</h2>
-            <p style="font-size: large;">I specialize in building high-performance, user-centric web applications using modern frameworks like React 18+, Next.js 14, and TypeScript, along with Webflow and Api handy work for visually stunning designs. My expertise lies in turning complex ideas into scalable, SEO-friendly, and lightning-fast solutions powered by serverless architectures, micro-frontends, AI modules and JAMstack.</p>
+            <p style="font-size: large;">I specialize in building high-performance, user-centric web applications using modern frameworks like React 18+, Next.js 14, and TypeScript, along with Webflow and API handy work for visually stunning designs. My expertise lies in turning complex ideas into scalable, SEO-friendly, and lightning-fast solutions powered by serverless architectures, micro-frontends, AI modules, and JAMstack.</p>
 
             <h2 style="color: #0f2027;">CERTIFICATES</h2>
             <div style="font-size: large;">Microsoft Excel & Microsoft Access Certification</div>
@@ -243,11 +256,37 @@ footer p {
                 <li>Ensured SEO optimization and enhanced web accessibility.</li>
             </ul>
 
-            <h2 style="color: #0f2027;">ADDITIONAL INFORMATION</h2>
-            <p>Currently learning advanced back-end development techniques and cloud deployment strategies. Actively participating in coding challenges and contributing to open-source projects. Recently completed a project involving real-time chat application development using WebSocket.</p>
+            <h2 style="color: #0f2027;">PROJECTS</h2>
+            <div class="project-item">
+                <h3>Real-Time Chat Application</h3>
+                <p>Developed a real-time chat application using WebSocket and React.js. The application supports multiple users and features like message history and user authentication.</p>
+            </div>
+            <div class="project-item">
+                <h3>E-Commerce Website</h3>
+                <p>Built a fully functional e-commerce website using Next.js and Stripe for payment processing. The website includes features like product search, user reviews, and a shopping cart.</p>
+            </div>
+
+            <h2 style="color: #0f2027;">ACHIEVEMENTS</h2>
+            <div class="achievement-item">
+                <h3>Hackathon Winner</h3>
+                <p>Won first place in a local hackathon for developing a innovative web application that uses AI to optimize user experience.</p>
+            </div>
+            <div class="achievement-item">
+                <h3>Open Source Contributor</h3>
+                <p>Contributed to several open-source projects, including a popular React component library and a backend framework.</p>
+            </div>
+
+            <h2 style="color: #0f2027;">INTERESTS</h2>
+            <div class="interest-item">
+                <h3>AI and Machine Learning</h3>
+                <p>Exploring the integration of AI and machine learning in web development to create smarter and more intuitive applications.</p>
+            </div>
+            <div class="interest-item">
+                <h3>Photography</h3>
+                <p>Passionate about photography, especially landscape and portrait photography, which helps in understanding visual design better.</p>
+            </div>
         </div>
     </div>
-
 
 <footer style="background-color: #2b4150; padding: 40px 20px; color: white; font-family: 'Arial', sans-serif;height: 20px;">
     <div class="social-icons" style="display: flex; justify-content: center; gap: 30px; margin-bottom: 30px;">
