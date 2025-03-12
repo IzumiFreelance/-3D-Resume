@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Altaf Hussian- CV</title>
+    <title>Altaf Hussain - CV</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -24,11 +24,12 @@
             margin-bottom: 20px;
             font-weight: bold;
         }
-        .contact-info {
-            text-align: left;
+        .contact-info img {
+            max-width: 150px;
+            float: right;
         }
         .contact-info h1 {
-            font-size: 32px;
+            font-size: 28px;
             font-weight: bold;
         }
         .key-competencies ul, .experience ul, .education ul {
@@ -40,43 +41,53 @@
             color: green;
             margin-right: 8px;
         }
+        @media (max-width: 768px) {
+            .contact-info img {
+                display: block;
+                margin: auto;
+                float: none;
+            }
+            .row {
+                flex-direction: column;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="cv-container">
-    <img src="link.png" width="200" style="float: right;">
-        <div class="contact-info">
-            <h1>Altaf Hussain</h1>
-              <h5>03420781798</h5>
-              <h5>izumiFreelance@gmail.com</h5>
-              <h5>Gilgit,Pakistan</h5>
-        </div> 
-    </br>
+        <div class="contact-info d-flex justify-content-between align-items-center">
+            <div>
+                <h1>Altaf Hussain</h1>
+                <p><strong>Phone:</strong> 03420781798</p>
+                <p><strong>Email:</strong> izumiFreelance@gmail.com</p>
+                <p><strong>Location:</strong> Gilgit, Pakistan</p>
+            </div>
+            <img src="link.png" alt="Profile Picture">
+        </div>
+        
         <h3 class="section-title">Full-stack Developer | Webflow Developer</h3>
-        <p>Crafting interactive, high-performance user interfaces with modern frameworks. I am a skilled Front-End Developer and Webflow Expert with 4 years of experience in building modern, responsive, and user-friendly websites. I specialize in HTML5, CSS3, JavaScript, and React.js, Tsx, Vite, Nodejs, React Native, Webflow, and WordPress, React 18+, Next.js 14 creating visually appealing and high-performing web solutions. I have expertise in CMS development, SEO optimization, and AI integration, helping businesses enhance their digital presence effectively.</p>
+        <p>Skilled Front-End Developer and Webflow Expert with 4 years of experience in modern, responsive, and user-friendly web development. Specializing in React.js, Next.js, TypeScript, Webflow, and AI integration, delivering high-performance web solutions.</p>
         
         <h4 class="section-title">Key Competencies</h4>
         <div class="row key-competencies">
             <div class="col-md-6">
                 <h5>Front-End Development</h5>
                 <ul>
-                    <li>Crafting interactive, high-performance user interfaces with modern frameworks</li>
-                    <li>Advanced animations & micro-interactions using CSS, JavaScript, and GSAP</li>
-                    <li>Custom JavaScript, React, and Next.js for scalable and dynamic applications</li>
-                    <li>Responsive & pixel-perfect design for a seamless user experience across devices</li>
-                    <li>API integrations & state management with Redux, Context API, and React Query</li>
-                    <li>Performance optimization for lightning-fast, SEO-friendly web applications</li>
+                    <li>Interactive UI with modern frameworks</li>
+                    <li>Advanced animations & micro-interactions</li>
+                    <li>React.js, Next.js, and scalable solutions</li>
+                    <li>API integrations & state management</li>
+                    <li>SEO-friendly web performance optimization</li>
                 </ul>
             </div>
             <div class="col-md-6">
                 <h5>Webflow Development</h5>
                 <ul>
-                    <li>Expert in Webflow Designer & Webflow CMS for custom web development</li>
-                    <li>Proficient in Webflow animations, interactions, and custom CSS/JS Integrations</li>
-                    <li>No-code to custom-code bridging for advanced functionality</li>
-                    <li>SEO best practices, structured data implementation, and fast-loading design</li>
-                    <li>Third-party integrations (Zapier, Memberstack, Jetboost, Airtable)</li>
-                    <li>Scalable solutions for eCommerce (Webflow Ecommerce), membership sites, and business websites</li>
+                    <li>Webflow Designer & CMS expert</li>
+                    <li>Custom animations & interactions</li>
+                    <li>SEO optimization & structured data</li>
+                    <li>Third-party integrations</li>
+                    <li>Scalable solutions for eCommerce & business sites</li>
                 </ul>
             </div>
         </div>
@@ -84,27 +95,25 @@
         <h4 class="section-title">Experience</h4>
         <div class="experience">
             <h5>Techzoid.Pvt.Ltd</h5>
-            <p><strong>Intern Front End Developer</strong> (6-june-2024) to (12-Dec-2024)</p>
-            <p>Intern Front-End Devloper with Techzoid.Pvt.Ltd for 6 months of learning expertise in building responsive, high-performance web applications.</p>
+            <p><strong>Intern Front-End Developer</strong> (June 2024 - Dec 2024)</p>
+            <p>Gained expertise in building responsive, high-performance web applications.</p>
 
-            
-            <h5>Techzoid.Pvt.Ltd</h5>
-            <p><strong>Front End Developer</strong> (Dec 2024 - Present)</p>
-            <p>Experienced Front-End Developer with 4 expertise in building responsive, high-performance web applications. Proficient in HTML5, CSS3, JavaScript, React.js, Next.js, WordPress, and Webflow, with skills in CMS integration, animations, and AI-powered solutions.</p>
-            
+            <p><strong>Front-End Developer</strong> (Dec 2024 - Present)</p>
+            <p>4+ years of experience in building dynamic and interactive web applications.</p>
+
             <p><strong>Webflow Developer</strong> (Jan 2025 - Present)</p>
-            <p>Skilled Webflow Developer with 3 years of experience in designing and developing responsive websites. Expertise in CMS integration, custom animations, and SEO optimization, ensuring visually appealing, high-performance designs across all devices.</p>
+            <p>Expert in Webflow development, CMS integration, and SEO optimization.</p>
 
-             <p><strong>Web Development Trainer</strong></p>
-                 <ul>
-            <li><strong>Techzoid.Pvt.Ltd</strong> - July 2024 - Present (Gilgit Pakistan)</li>
-            <li><strong>ScipherSol.Pvt.Ltd</strong> - Aug 2024 -  (Gilgit Pakistan)</li>
-        </ul>
+            <h5>Web Development Trainer</h5>
+            <ul>
+                <li><strong>Techzoid.Pvt.Ltd</strong> (July 2024 - Present, Gilgit Pakistan)</li>
+                <li><strong>ScipherSol.Pvt.Ltd</strong> (Aug 2024 - Present, Gilgit Pakistan)</li>
+            </ul>
         </div>
                 
         <h4 class="section-title">Education</h4>
         <ul class="education">
-            <li><strong>Student of Computer Science</strong> Private School</li>
+            <li><strong>Computer Science Student</strong> - Private School</li>
         </ul>
     </div>
 </body>
