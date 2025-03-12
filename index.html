@@ -125,7 +125,14 @@
     <script>
         function downloadCV() {
             const element = document.getElementById('cv');
-            html2pdf().from(element).save('Altaf_Hussain_CV.pdf');
+            const opt = {
+                margin: 10,
+                filename: 'Altaf_Hussain_CV.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+            html2pdf().set(opt).from(element).save();
         }
     </script>
 </body>
