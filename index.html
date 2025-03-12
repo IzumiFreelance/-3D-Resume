@@ -122,18 +122,22 @@
         </div>
     </div>
     
-    <script>
-        function downloadCV() {
-            const element = document.getElementById('cv');
-            const opt = {
-                margin: 10,
-                filename: 'Altaf_Hussain_CV.pdf',
-                image: { type: 'jpeg', quality: 0.98 },
-                html2canvas: { scale: 2 },
-                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-            };
+<script>
+    function downloadCV() {
+        const element = document.getElementById('cv');
+        const opt = {
+            margin: 10,
+            filename: 'Altaf_Hussain_CV.pdf',
+            image: { type: 'jpeg', quality: 1.0 },
+            html2canvas: { scale: 3, useCORS: true },
+            jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+        };
+
+        // Ensuring all styles are loaded
+        setTimeout(() => {
             html2pdf().set(opt).from(element).save();
-        }
-    </script>
+        }, 100);
+    }
+</script>
 </body>
 </html>
