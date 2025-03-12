@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Altaf Hussain - CV</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -32,15 +32,6 @@
         .contact-info h1 {
             font-size: 28px;
             font-weight: bold;
-        }
-        .key-competencies ul, .experience ul, .education ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        .key-competencies ul li::before {
-            content: '\2713';
-            color: green;
-            margin-right: 8px;
         }
         @media (max-width: 768px) {
             .contact-info img {
@@ -69,74 +60,29 @@
         <h3 class="section-title">Full-stack Developer | Webflow Developer</h3>
         <p>Skilled Front-End Developer and Webflow Expert with 4 years of experience in modern, responsive, and user-friendly web development. Specializing in React.js, Next.js, TypeScript, Webflow, and AI integration, delivering high-performance web solutions.</p>
         
-        <h4 class="section-title">Key Competencies</h4>
-        <div class="row key-competencies">
-            <div class="col-md-6">
-                <h5>Front-End Development</h5>
-                <ul>
-                    <li>Interactive UI with modern frameworks</li>
-                    <li>Advanced animations & micro-interactions</li>
-                    <li>React.js, Next.js, and scalable solutions</li>
-                    <li>API integrations & state management</li>
-                    <li>SEO-friendly web performance optimization</li>
-                </ul>
-            </div>
-            <div class="col-md-6">
-                <h5>Webflow Development</h5>
-                <ul>
-                    <li>Webflow Designer & CMS expert</li>
-                    <li>Custom animations & interactions</li>
-                    <li>SEO optimization & structured data</li>
-                    <li>Third-party integrations</li>
-                    <li>Scalable solutions for eCommerce & business sites</li>
-                </ul>
-            </div>
-        </div>
-        
         <h4 class="section-title">Experience</h4>
         <div class="experience">
             <h5>Techzoid.Pvt.Ltd</h5>
             <p><strong>Intern Front-End Developer</strong> (June 2024 - Dec 2024)</p>
             <p>Gained expertise in building responsive, high-performance web applications.</p>
-
             <p><strong>Front-End Developer</strong> (Dec 2024 - Present)</p>
             <p>4+ years of experience in building dynamic and interactive web applications.</p>
-
-            <p><strong>Webflow Developer</strong> (Jan 2025 - Present)</p>
-            <p>Expert in Webflow development, CMS integration, and SEO optimization.</p>
-
-            <h5>Web Development Trainer</h5>
-            <ul>
-                <li><strong>Techzoid.Pvt.Ltd</strong> (July 2024 - Present, Gilgit Pakistan)</li>
-                <li><strong>ScipherSol.Pvt.Ltd</strong> (Aug 2024 - Present, Gilgit Pakistan)</li>
-            </ul>
         </div>
                 
-        <h4 class="section-title">Education</h4>
-        <ul class="education">
-            <li><strong>Computer Science Student</strong> - Private School</li>
-        </ul>
-        
         <div class="text-center mt-4">
-            <button class="btn btn-primary" onclick="downloadCV()">Download CV as PDF</button>
+            <button class="btn btn-primary" onclick="downloadCV()">Download CV as PNG</button>
         </div>
     </div>
     
 <script>
     function downloadCV() {
         const element = document.getElementById('cv');
-        const opt = {
-            margin: 10,
-            filename: 'Altaf_Hussain_CV.pdf',
-            image: { type: 'jpeg', quality: 1.0 },
-            html2canvas: { scale: 3, useCORS: true },
-            jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-        };
-
-        // Ensuring all styles are loaded
-        setTimeout(() => {
-            html2pdf().set(opt).from(element).save();
-        }, 100);
+        html2canvas(element, { scale: 3, useCORS: true }).then(canvas => {
+            const link = document.createElement('a');
+            link.download = 'Altaf_Hussain_CV.png';
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        });
     }
 </script>
 </body>
