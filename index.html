@@ -3,27 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Altaf Hussain - Web Developer</title>
+    <title>Altaf Hussain - Resume</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
             background: #f4f4f4;
-            color: #333;
+            margin: 0;
+            padding: 20px;
         }
         .resume-container {
-            width: 850px;
-            max-width: 100%;
-            margin: 20px auto;
+            width: 800px;
+            margin: auto;
             padding: 30px;
             background: white;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         .header {
             text-align: center;
-            border-bottom: 2px solid black;
+            border-bottom: 2px solid #333;
             padding-bottom: 10px;
         }
         .header h1 {
@@ -32,33 +30,26 @@
         }
         .header p {
             font-size: 14px;
-            margin-bottom: 2px;
+            margin: 5px 0;
         }
         .section {
-            margin-top: 15px;
+            margin-top: 20px;
         }
         .section h2 {
             font-size: 18px;
-            border-bottom: 2px solid black;
-            padding-bottom: 3px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 5px;
         }
         .section p, .section li {
             font-size: 14px;
-            line-height: 1.5;
-        }
-        .columns {
-            display: flex;
-            justify-content: space-between;
-        }
-        .column {
-            width: 48%;
+            margin: 5px 0;
         }
         .download-btn {
             display: block;
             width: 200px;
             margin: 20px auto;
             padding: 10px;
-            font-size: 14px;
+            font-size: 16px;
             text-align: center;
             background: #007bff;
             color: white;
@@ -69,68 +60,61 @@
         .download-btn:hover {
             background: #0056b3;
         }
+        .column {
+            display: flex;
+            justify-content: space-between;
+        }
+        .column div {
+            width: 48%;
+        }
     </style>
 </head>
 <body>
     <div class="resume-container" id="resume">
         <div class="header">
             <h1>Altaf Hussain</h1>
-            <p>Web Developer</p>
+            <p>Front-End Developer | Webflow Developer</p>
             <p>📞 03420781798 | 📧 IzumiFreelance@gmail.com | 📍 Gilgit, Pakistan</p>
         </div>
-        
-        <div class="columns">
-            <div class="column">
-                <div class="section">
-                    <h2>Key Competencies</h2>
-                    <ul>
-                        <li>Crafting high-performance UI with modern frameworks</li>
-                        <li>Advanced animations & micro-interactions</li>
-                        <li>Custom JavaScript, React, and Next.js</li>
-                        <li>Responsive & pixel-perfect design</li>
-                        <li>API integrations & state management</li>
-                        <li>Performance optimization</li>
-                    </ul>
-                </div>
+        <div class="section">
+            <h2>Summary</h2>
+            <p>Crafting interactive, high-performance user interfaces with modern frameworks. I am a skilled Front-End Developer and Webflow Expert with experience in building modern, responsive, and user-friendly websites.</p>
+        </div>
+        <div class="column section">
+            <div>
+                <h2>Key Competencies</h2>
+                <ul>
+                    <li>React.js, Next.js, JavaScript, TypeScript</li>
+                    <li>Advanced animations & interactions (GSAP, CSS)</li>
+                    <li>API integrations, Redux, Context API</li>
+                    <li>Performance optimization & SEO</li>
+                    <li>Webflow development & custom animations</li>
+                </ul>
             </div>
-            <div class="column">
-                <div class="section">
-                    <h2>Webflow Development</h2>
-                    <ul>
-                        <li>Expert in Webflow Designer & CMS</li>
-                        <li>Proficient in animations, interactions</li>
-                        <li>No-code to custom-code bridging</li>
-                        <li>SEO best practices & structured data</li>
-                        <li>Third-party integrations (Zapier, Airtable)</li>
-                        <li>Scalable solutions for e-commerce</li>
-                    </ul>
-                </div>
+            <div>
+                <h2>Education</h2>
+                <p><strong>Bachelor of Computer Science</strong></p>
+                <p>Karakoram International University</p>
+                <p><strong>Intermediate in Computer Science</strong></p>
+                <p>Boys Degree College, Gilgit</p>
             </div>
         </div>
-        
         <div class="section">
             <h2>Experience</h2>
-            <p><strong>Techzoid Pvt. Ltd - Front End Developer</strong> (Oct 2021 - Present)</p>
-            <p>Building modern web applications using React.js, Next.js, and Webflow with a focus on performance and SEO.</p>
+            <p><strong>Techzoid Pvt. Ltd</strong> - Front-End Developer (Intern) (2023-2024)</p>
+            <ul>
+                <li>Designed responsive websites using React.js</li>
+                <li>Developed and maintained server-side applications</li>
+                <li>Optimized performance and ensured cross-browser compatibility</li>
+                <li>Integrated RESTful APIs and managed Git version control</li>
+            </ul>
             <p><strong>Freelance Web Developer</strong> (2022 - Present)</p>
-            <p>Delivering custom websites and applications, optimizing UI/UX, and integrating APIs.</p>
+            <ul>
+                <li>Developed client projects using modern frameworks</li>
+                <li>Ensured SEO optimization and accessibility</li>
+                <li>Worked on interactive animations and UI enhancements</li>
+            </ul>
         </div>
-        
-        <div class="section">
-            <h2>Education</h2>
-            <p><strong>Bachelor of Computer Science</strong> - Karakoram International University (In Progress)</p>
-        </div>
-        
-        <div class="section">
-            <h2>Certificates</h2>
-            <p>Microsoft Excel & Access, Front-End Web Development, Responsive Web Design, Webflow Certified</p>
-        </div>
-        
-        <div class="section">
-            <h2>Languages</h2>
-            <p>English (Fluent), Japanese (Basic), Urdu (Fluent)</p>
-        </div>
-        
         <div class="section">
             <h2>Projects</h2>
             <ul>
@@ -138,10 +122,26 @@
                 <li><strong>E-Commerce Website:</strong> Next.js, Stripe Payments</li>
             </ul>
         </div>
+        <div class="column section">
+            <div>
+                <h2>Skills</h2>
+                <ul>
+                    <li>React.js, Webflow, API Integration</li>
+                    <li>Git, Web Security, Debugging</li>
+                    <li>HTML, CSS, JavaScript, TypeScript</li>
+                </ul>
+            </div>
+            <div>
+                <h2>Languages</h2>
+                <ul>
+                    <li>English (Fluent)</li>
+                    <li>Japanese (Basic)</li>
+                    <li>Urdu (Fluent)</li>
+                </ul>
+            </div>
+        </div>
     </div>
-    
     <button class="download-btn" onclick="downloadPDF()">Download as PDF</button>
-
     <script>
         function downloadPDF() {
             const element = document.getElementById('resume');
@@ -152,7 +152,10 @@
                 html2canvas: { scale: 2 },
                 jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
             };
-            html2pdf().set(opt).from(element).save();
+            html2pdf().set(opt).from(element).toPdf().get('pdf').then(function(pdf) {
+                pdf.internal.scaleFactor = 1.5;
+                pdf.save();
+            });
         }
     </script>
 </body>
