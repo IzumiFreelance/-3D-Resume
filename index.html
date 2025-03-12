@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Altaf Hussain - Web Developer</title>
+    <title>Altaf Hussain - Resume</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <style>
         body {
@@ -21,26 +21,33 @@
             background: white;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+        .header {
+            text-align: center;
+        }
         .header h1 {
-            font-size: 22px;
+            font-size: 28px;
+            margin-bottom: 5px;
         }
         .header p {
-            font-size: 12px;
+            font-size: 14px;
+            margin: 0;
         }
         .section h2 {
-            font-size: 16px;
-            border-bottom: 1px solid #333;
-            padding-bottom: 3px;
+            font-size: 18px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+            margin-top: 20px;
         }
         .section p, .section li {
-            font-size: 12px;
+            font-size: 14px;
+            line-height: 1.6;
         }
         .download-btn {
             display: block;
             width: 200px;
             margin: 20px auto;
             padding: 10px;
-            font-size: 14px;
+            font-size: 16px;
             text-align: center;
             background: #007bff;
             color: white;
@@ -51,61 +58,74 @@
         .download-btn:hover {
             background: #0056b3;
         }
-        /* Ensure everything is scaled to fit a single A4 page */
-        @media print {
-            body {
-                zoom: 0.8; /* Adjust this if needed */
-            }
-        }
     </style>
 </head>
 <body>
     <div class="resume-container" id="resume">
         <div class="header">
             <h1>Altaf Hussain</h1>
-            <p>Web Developer</p>
+            <p>Web Developer | Webflow Expert</p>
         </div>
         <div class="section">
             <h2>Contact</h2>
-            <p>📞 03420781798 |</br> 📧 IzumiFreelance@gmail.com |</br> 📍 Pakistan, Gilgit</p>
+            <p>📞 03420781798 | 📧 IzumiFreelance@gmail.com | 📍 Gilgit, Pakistan</p>
         </div>
         <div class="section">
             <h2>Summary</h2>
-            <p>
-                Specializing in high-performance, user-centric web applications using React 18+, Next.js 14, TypeScript, Webflow,</br> and API integration. Skilled in building scalable, SEO-friendly applications with a focus on user experience and performance.
-            </p>
+            <p>Skilled Web Developer specializing in high-performance user interfaces with React.js, Next.js, and Webflow. 
+            Strong expertise in API integration, SEO optimization, and AI-driven web solutions.</p>
+        </div>
+        <div class="section">
+            <h2>Key Competencies</h2>
+            <ul>
+                <li>Interactive and scalable front-end development</li>
+                <li>Advanced animations & micro-interactions (GSAP, CSS, JavaScript)</li>
+                <li>Custom React.js, Next.js, and API integrations</li>
+                <li>SEO-friendly, high-performance web applications</li>
+                <li>CMS solutions (Webflow, WordPress)</li>
+                <li>Third-party API integrations (Zapier, Airtable, Stripe)</li>
+            </ul>
         </div>
         <div class="section">
             <h2>Experience</h2>
+            <h4>Techzoid Pvt. Ltd - Web Developer (Intern) | 2023 - 2024</h4>
             <ul>
-                <h4><strong>Web Developer (Intern)</strong> - Techzoid (2023-2024)</h4>
-                <p>Designed responsive websites using React.js and other frameworks.</p>
-                <p>Developed and maintained server-side applications with Node.js.</p>
-                <p>Optimized performance and ensured cross-browser compatibility.</p>
-                <p>Integrated RESTful APIs and managed version control with Git.</p>
-                <p>Used AI as a co-pilot for efficiency.</p>
-                <h4><strong>Freelance Web Developer</strong> (2022 - Present)</h4>
-                <p>Worked on multiple client projects to deliver fully functional and visually appealing websites.</p>
-                <p>Utilized modern front-end frameworks such as React.js and Vue.js.</p>
-                <p>Collaborated with clients to understand project requirements and timelines.</p>
-                <p>Ensured SEO optimization and enhanced web accessibility.</p>
+                <li>Built responsive web applications using React.js</li>
+                <li>Developed and optimized front-end architecture</li>
+                <li>Managed server-side operations using Node.js</li>
+                <li>Integrated APIs and ensured cross-browser compatibility</li>
+            </ul>
+            <h4>Freelance Web Developer | 2022 - Present</h4>
+            <ul>
+                <li>Designed and developed custom websites for various clients</li>
+                <li>Worked extensively with Webflow, React.js, and Next.js</li>
+                <li>SEO optimization and web accessibility enhancements</li>
             </ul>
         </div>
         <div class="section">
             <h2>Education</h2>
-            <p style="margin-left: 3em">Computer Science Student (In Progress)</p>
+            <p>Computer Science Student (In Progress) - Karakoram International University</p>
         </div>
         <div class="section">
             <h2>Certificates</h2>
-            <p style="margin-left: 3em">Microsoft Excel & Access,</br> Front-end Web Development,</br> Responsive Web Design,</br> Webflow Certified</p>
+            <ul>
+                <li>Microsoft Excel & Access</li>
+                <li>Front-End Web Development</li>
+                <li>Webflow Certified</li>
+                <li>Responsive Web Design</li>
+            </ul>
         </div>
         <div class="section">
             <h2>Skills</h2>
-            <p style="margin-left: 3em">React.js,</br> Webflow,</br> API Integration,</br> Git,</br> Web Security,</br> Troubleshooting</p>
+            <ul>
+                <li>React.js, Next.js, Webflow</li>
+                <li>API Integration, Git, Web Security</li>
+                <li>Performance Optimization & Debugging</li>
+            </ul>
         </div>
         <div class="section">
             <h2>Languages</h2>
-            <p style="margin-left: 3em">English (Fluent),</br> Japanese (Basic),</br> Urdu (Fluent)</p>
+            <p>English (Fluent), Japanese (Basic), Urdu (Fluent)</p>
         </div>
         <div class="section">
             <h2>Projects</h2>
@@ -121,17 +141,7 @@
     <script>
         function downloadPDF() {
             const element = document.getElementById('resume');
-            const opt = {
-                margin: 5,
-                filename: 'Altaf_Hussain_Resume.pdf',
-                image: { type: 'jpeg', quality: 1 },
-                html2canvas: { scale: 2 },
-                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-            };
-            html2pdf().set(opt).from(element).toPdf().get('pdf').then(function(pdf) {
-                pdf.internal.scaleFactor = 1.5; // Scale down content
-                pdf.save();
-            });
+            html2pdf().from(element).save('Altaf_Hussain_Resume.pdf');
         }
     </script>
 </body>
