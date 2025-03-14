@@ -19,39 +19,34 @@
             margin: auto;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
-        .header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        .header img {
-            max-width: 150px;
-            border-radius: 50%;
-            margin-bottom: 10px;
-        }
-        .header h1 {
-            font-size: 36px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        .header p {
-            font-size: 18px;
-            margin-bottom: 5px;
-        }
         .section-title {
             border-bottom: 2px solid black;
             padding-bottom: 5px;
             margin-bottom: 20px;
             font-weight: bold;
-            font-size: 24px;
         }
-        .progress-bar {
-            height: 20px;
-            margin-bottom: 10px;
+        .contact-info img {
+            max-width: 150px;
+            float: right;
+        }
+        .contact-info h1 {
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .key-competencies ul, .experience ul, .education ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .key-competencies ul li::before {
+            content: '\2713';
+            color: green;
+            margin-right: 8px;
         }
         @media (max-width: 768px) {
-            .header img {
+            .contact-info img {
                 display: block;
                 margin: auto;
+                float: none;
             }
             .row {
                 flex-direction: column;
@@ -61,34 +56,32 @@
 </head>
 <body>
     <div class="cv-container" id="cv">
-        <div class="header">
+        <div class="contact-info d-flex justify-content-between align-items-center">
+            <div>
+                <h1>Altaf Hussain</h1>
+                <p><strong>Phone:</strong> 03420781798</p>
+                <p><strong>Email:</strong> izumiFreelance@gmail.com</p>
+                <p><strong>Location:</strong> Gilgit, Pakistan</p>
+                <p><strong>Portfolio:</strong> <a href="https://altafhussain.vercel.app/">altafhussain.vercel.app</a></p>
+            </div>
             <img src="link.png" alt="Profile Picture">
-            <h1>Altaf Hussain</h1>
-            <p><strong>Phone:</strong> 03420781798</p>
-            <p><strong>Email:</strong> izumiFreelance@gmail.com</p>
-            <p><strong>Location:</strong> Gilgit, Pakistan</p>
-            <p><strong>Portfolio:</strong> <a href="https://altafhussain.vercel.app/">altafhussain.vercel.app</a></p>
         </div>
-
+        
         <h3 class="section-title">Profile</h3>
-        <p>Skilled Front-End Developer and Webflow Expert with 4 years of experience in modern, responsive, and user-friendly web development. Specializing in React.js, Next.js, TypeScript, Webflow, and more.</p>
+        <p>Skilled Front-End Developer and Webflow Expert with 4 years of experience in modern, responsive, and user-friendly web development. Specializing in React.js, Next.js, TypeScript, Webflow, and AI integration, delivering high-performance web solutions.</p>
         
         <h4 class="section-title">Skills</h4>
-        <div class="mb-4">
-            <div class="progress">
-                <div class="progress-bar bg-success" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">Front-End Development</div>
-            </div>
-            <div class="progress">
-                <div class="progress-bar bg-info" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">Webflow Expert</div>
-            </div>
-            <div class="progress">
-                <div class="progress-bar bg-warning" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">React.js, Next.js, TypeScript</div>
-            </div>
-            <div class="progress">
-                <div class="progress-bar bg-danger" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">API/AI Integration</div>
-            </div>
-        </div>
-
+        <ul>
+            <li>Front-End Development</li>
+            <li>Webflow Expert</li>
+            <li>React.js, Next.js, TypeScript</li>
+            <li>API/AI Integration</li>
+            <li>Node.js</li>
+            <li>SQL/PHP Database</li>
+            <li>Adaptability to Change</li>
+            <li>React Native</li>
+        </ul>
+        
         <h4 class="section-title">Languages</h4>
         <ul>
             <li>English (Fluent)</li>
@@ -103,6 +96,7 @@
             <li>Gained expertise in building responsive, high-performance web applications.</li>
             <li>Designed responsive websites using React.js and other frameworks.</li>
         </ul>
+        
         <p><strong>Junior Full-Stack Developer</strong> (Dec 2024 - Present)</p>
         <ul>
             <li>4+ years of experience in building dynamic and interactive web applications.</li>
@@ -111,6 +105,7 @@
             <li>Integrated RESTful APIs and managed version control with Git.</li>
             <li>Used AI as a co-pilot for efficiency.</li>
         </ul>
+        
         <p><strong>Webflow Developer</strong> (Jan 2025 - Present)</p>
         <p>Expert in Webflow development, CMS integration, and SEO optimization.</p>
         
@@ -119,7 +114,7 @@
             <li><strong>Techzoid.Pvt.Ltd</strong> (July 2024 - Present, Gilgit Pakistan)</li>
             <li><strong>ScipherSol.Pvt.Ltd</strong> (Aug 2024 - Present, Gilgit Pakistan)</li>
         </ul>
-
+                
         <h4 class="section-title">Education</h4>
         <ul>
             <li><strong>Computer Science Student</strong> - Private School</li>
@@ -133,21 +128,22 @@
         </div>
     </div>
 
-    <script>
-        function downloadCV() {
-            const element = document.getElementById('cv');
-            const opt = {
-                margin: 10,
-                filename: 'Altaf_Hussain_CV.pdf',
-                image: { type: 'jpeg', quality: 1.0 },
-                html2canvas: { scale: 3, useCORS: true },
-                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-            };
+<script>
+    function downloadCV() {
+        const element = document.getElementById('cv');
+        const opt = {
+            margin: 10,
+            filename: 'Altaf_Hussain_CV.pdf',
+            image: { type: 'jpeg', quality: 1.0 },
+            html2canvas: { scale: 3, useCORS: true },
+            jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+        };
 
-            setTimeout(() => {
-                html2pdf().set(opt).from(element).save();
-            }, 100);
-        }
-    </script>
+        // Ensuring all styles are loaded
+        setTimeout(() => {
+            html2pdf().set(opt).from(element).save();
+        }, 100);
+    }
+</script>
 </body>
 </html>
