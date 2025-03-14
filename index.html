@@ -5,75 +5,137 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Altaf Hussain - CV</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <style>
         body {
-            background-color: white;
             font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
             padding: 20px;
         }
         .cv-container {
-            background: #161616;
-            color: white;
+            background: white;
             padding: 30px;
             max-width: 900px;
             margin: auto;
-            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
         .section-title {
+            border-bottom: 2px solid black;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
             font-weight: bold;
-            color: #a0a0a0;
-            text-transform: uppercase;
-            margin-bottom: 10px;
         }
-        .contact-info p, .skills ul, .experience p, .education p {
-            margin: 5px 0;
+        .contact-info img {
+            max-width: 150px;
+            float: right;
         }
-        .skills ul {
+        .contact-info h1 {
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .key-competencies ul, .experience ul, .education ul {
             list-style: none;
-            padding: 0;
+            padding-left: 0;
         }
-        .skills ul li {
-            padding: 2px 0;
+        .key-competencies ul li::before {
+            content: '\2713';
+            color: green;
+            margin-right: 8px;
         }
-        .qr-code {
-            max-width: 100px;
-        }
-        .divider {
-            border-bottom: 1px solid #a0a0a0;
-            margin: 10px 0;
+        @media (max-width: 768px) {
+            .contact-info img {
+                display: block;
+                margin: auto;
+                float: none;
+            }
+            .row {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="cv-container">
-        <div class="d-flex justify-content-between align-items-center">
-            <h1>ALTAF HUSSAIN</h1>
-            <img src="qr-code.png" alt="QR Code" class="qr-code">
+    <div class="cv-container" id="cv">
+        <div class="contact-info d-flex justify-content-between align-items-center">
+            <div>
+                <h1>Altaf Hussain</h1>
+                <p><strong>Phone:</strong> 03420781798</p>
+                <p><strong>Email:</strong> izumiFreelance@gmail.com</p>
+                <p><strong>Location:</strong> Gilgit, Pakistan</p>
+            </div>
+            <img src="link.png" alt="Profile Picture">
         </div>
-        <h4>FULL-STACK DEVELOPER | WEBFLOW DEVELOPER</h4>
-        <div class="divider"></div>
-        <div class="contact-info">
-            <p>📞 03420781798</p>
-            <p>✉ izumiFreelance@gmail.com</p>
-            <p>📍 Gilgit, Pakistan</p>
-            <p>🔗 altafhussain.vercel.app</p>
+        
+        <h3 class="section-title">Full-stack Developer | Webflow Developer</h3>
+        <p>Skilled Front-End Developer and Webflow Expert with 4 years of experience in modern, responsive, and user-friendly web development. Specializing in React.js, Next.js, TypeScript, Webflow, and AI integration, delivering high-performance web solutions.</p>
+        
+        <h4 class="section-title">Key Competencies</h4>
+        <div class="row key-competencies">
+            <div class="col-md-6">
+                <h5>Front-End Development</h5>
+                <ul>
+                    <li>Interactive UI with modern frameworks</li>
+                    <li>Advanced animations & micro-interactions</li>
+                    <li>React.js, Next.js, and scalable solutions</li>
+                    <li>API integrations & state management</li>
+                    <li>SEO-friendly web performance optimization</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h5>Webflow Development</h5>
+                <ul>
+                    <li>Webflow Designer & CMS expert</li>
+                    <li>Custom animations & interactions</li>
+                    <li>SEO optimization & structured data</li>
+                    <li>Third-party integrations</li>
+                    <li>Scalable solutions for eCommerce & business sites</li>
+                </ul>
+            </div>
         </div>
-        <div class="divider"></div>
-        <h5 class="section-title">Profile</h5>
-        <p>Skilled Front-End Developer and Webflow Expert with 4 years of experience in modern, responsive, and user-friendly web development...</p>
-        <h5 class="section-title">Skills</h5>
-        <ul class="skills">
-            <li>Front-End Developer</li>
-            <li>Webflow Expert</li>
-            <li>React.js, Next.js, TypeScript</li>
-            <li>API/AI Integration</li>
-            <li>Node.js, SQL/PHP</li>
+        
+        <h4 class="section-title">Experience</h4>
+        <div class="experience">
+            <h5>Techzoid.Pvt.Ltd</h5>
+            <p><strong>Intern Front-End Developer</strong> (June 2024 - Dec 2024)</p>
+            <p>Gained expertise in building responsive, high-performance web applications.</p>
+
+            <p><strong>Front-End Developer</strong> (Dec 2024 - Present)</p>
+            <p>4+ years of experience in building dynamic and interactive web applications.</p>
+
+            <p><strong>Webflow Developer</strong> (Jan 2025 - Present)</p>
+            <p>Expert in Webflow development, CMS integration, and SEO optimization.</p>
+
+            <h5>Web Development Trainer</h5>
+            <ul>
+                <li><strong>Techzoid.Pvt.Ltd</strong> (July 2024 - Present, Gilgit Pakistan)</li>
+                <li><strong>ScipherSol.Pvt.Ltd</strong> (Aug 2024 - Present, Gilgit Pakistan)</li>
+            </ul>
+        </div>
+                
+        <h4 class="section-title">Education</h4>
+        <ul class="education">
+            <li><strong>Computer Science Student</strong> - Private School</li>
         </ul>
-        <h5 class="section-title">Work Experience</h5>
-        <p><strong>Techzoid.Pvt.Ltd</strong> (Intern Front-End Developer) - 12-June-2024</p>
-        <p><strong>Junior Full-Stack Developer</strong> (Dec-2024-Present)</p>
-        <h5 class="section-title">Education</h5>
-        <p>Computer Science - Student of Computer Science</p>
-    </div>
+        
+        <div class="text-center mt-4">
+<button class="btn btn-primary" onclick="window.location.href='https://drive.google.com/file/d/1LMfq8p8rh1-KFQgLgyUnF2URAZJZeXGR/view?usp=sharing'">Download CV</button>    </div>
+    
+<script>
+    function downloadCV() {
+        const element = document.getElementById('cv');
+        const opt = {
+            margin: 10,
+            filename: 'Altaf_Hussain_CV.pdf',
+            image: { type: 'jpeg', quality: 1.0 },
+            html2canvas: { scale: 3, useCORS: true },
+            jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+        };
+
+        // Ensuring all styles are loaded
+        setTimeout(() => {
+            html2pdf().set(opt).from(element).save();
+        }, 100);
+    }
+</script>
 </body>
 </html>
