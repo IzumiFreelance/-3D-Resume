@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Altaf Hussain - CV</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -14,56 +15,89 @@
         .cv-container {
             background: white;
             padding: 30px;
-            max-width: 800px;
+            max-width: 900px;
             margin: auto;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
         .section-title {
-            font-size: 18px;
-            font-weight: bold;
             border-bottom: 2px solid black;
             padding-bottom: 5px;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            font-weight: bold;
         }
-        .contact-section p {
-            margin: 0;
+        .contact-info img {
+            max-width: 150px;
+            float: right;
         }
-        .skills ul, .languages ul {
-            list-style-type: none;
-            padding: 0;
+        .contact-info h1 {
+            font-size: 28px;
+            font-weight: bold;
         }
-        .skills ul li, .languages ul li {
-            margin-bottom: 5px;
+        .key-competencies ul, .experience ul, .education ul {
+            list-style: none;
+            padding-left: 0;
         }
-        .work-experience ul {
-            list-style-type: disc;
-            padding-left: 20px;
+        .key-competencies ul li::before {
+            content: '\2713';
+            color: green;
+            margin-right: 8px;
+        }
+        @media (max-width: 768px) {
+            .contact-info img {
+                display: block;
+                margin: auto;
+                float: none;
+            }
+            .row {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="cv-container">
-        <div class="contact-section">
-            <h2>Contact</h2>
-            <p>
-                📞 03420781798<br>
-                📧 izumiFreelance@gmail.com<br>
-                📍 Gilgit, Pakistan<br>
-                🌐 altafhussain.vercel.app
-            </p>
+    <div class="cv-container" id="cv">
+        <div class="contact-info d-flex justify-content-between align-items-center">
+            <div>
+                <h1>Altaf Hussain</h1>
+                <p><strong>Phone:</strong> 03420781798</p>
+                <p><strong>Email:</strong> izumiFreelance@gmail.com</p>
+                <p><strong>Location:</strong> Gilgit, Pakistan</p>
+                <p><strong>Portfolio:</strong> <a href="https://altafhussain.vercel.app/">altafhussain.vercel.app</a></p>
+            </div>
+            <img src="link.png" alt="Profile Picture">
         </div>
-
-        <h2 class="section-title">Profile</h2>
+        
+        <h3 class="section-title">Profile</h3>
         <p>Skilled Front-End Developer and Webflow Expert with 4 years of experience in modern, responsive, and user-friendly web development. Specializing in React.js, Next.js, TypeScript, Webflow, and AI integration, delivering high-performance web solutions.</p>
-
-        <h2 class="section-title">Work Experience</h2>
-        <p><strong>Techzoid.Pvt.Ltd</strong> (Intern Front-End Developer) (12-June-2024)</p>
+        
+        <h4 class="section-title">Skills</h4>
+        <ul>
+            <li>Front-End Development</li>
+            <li>Webflow Expert</li>
+            <li>React.js, Next.js, TypeScript</li>
+            <li>API/AI Integration</li>
+            <li>Node.js</li>
+            <li>SQL/PHP Database</li>
+            <li>Adaptability to Change</li>
+            <li>React Native</li>
+        </ul>
+        
+        <h4 class="section-title">Languages</h4>
+        <ul>
+            <li>English (Fluent)</li>
+            <li>Urdu (Fluent)</li>
+            <li>Japanese (Basic)</li>
+        </ul>
+        
+        <h4 class="section-title">Experience</h4>
+        <h5>Techzoid.Pvt.Ltd</h5>
+        <p><strong>Intern Front-End Developer</strong> (June 2024 - Dec 2024)</p>
         <ul>
             <li>Gained expertise in building responsive, high-performance web applications.</li>
             <li>Designed responsive websites using React.js and other frameworks.</li>
         </ul>
         
-        <p><strong>Techzoid.Pvt.Ltd</strong> (Junior Full-Stack Developer) (DEC-2024 - PRESENT)</p>
+        <p><strong>Junior Full-Stack Developer</strong> (Dec 2024 - Present)</p>
         <ul>
             <li>4+ years of experience in building dynamic and interactive web applications.</li>
             <li>Developed & maintained server-side applications with Node.js.</li>
@@ -72,32 +106,44 @@
             <li>Used AI as a co-pilot for efficiency.</li>
         </ul>
         
-        <p><strong>Webflow Developer</strong></p>
+        <p><strong>Webflow Developer</strong> (Jan 2025 - Present)</p>
         <p>Expert in Webflow development, CMS integration, and SEO optimization.</p>
-
-        <h2 class="section-title">Skills</h2>
-        <ul class="skills">
-            <li>Front-End Developer</li>
-            <li>Webflow Expert</li>
-            <li>React.js</li>
-            <li>Next.js</li>
-            <li>TypeScript</li>
-            <li>API/AI Integration</li>
-            <li>Node.js</li>
-            <li>SQL/PHP Database</li>
-            <li>Adaptability to Change</li>
-            <li>React Native</li>
+        
+        <h5>Web Development Trainer</h5>
+        <ul>
+            <li><strong>Techzoid.Pvt.Ltd</strong> (July 2024 - Present, Gilgit Pakistan)</li>
+            <li><strong>ScipherSol.Pvt.Ltd</strong> (Aug 2024 - Present, Gilgit Pakistan)</li>
         </ul>
-
-        <h2 class="section-title">Languages</h2>
-        <ul class="languages">
-            <li>English (Fluent)</li>
-            <li>Urdu (Fluent)</li>
-            <li>Japanese (Basic)</li>
+                
+        <h4 class="section-title">Education</h4>
+        <ul>
+            <li><strong>Computer Science Student</strong> - Private School</li>
         </ul>
-
-        <h2 class="section-title">Education</h2>
-        <p><strong>Computer Science</strong> - Student of Computer Science (Present)</p>
+        
+        <h4 class="section-title">Reference</h4>
+        <p>Will be furnished on demand</p>
+        
+        <div class="text-center mt-4">
+            <button class="btn btn-primary" onclick="window.location.href='https://drive.google.com/file/d/1LMfq8p8rh1-KFQgLgyUnF2URAZJZeXGR/view?usp=sharing'">Download CV</button>
+        </div>
     </div>
+
+<script>
+    function downloadCV() {
+        const element = document.getElementById('cv');
+        const opt = {
+            margin: 10,
+            filename: 'Altaf_Hussain_CV.pdf',
+            image: { type: 'jpeg', quality: 1.0 },
+            html2canvas: { scale: 3, useCORS: true },
+            jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+        };
+
+        // Ensuring all styles are loaded
+        setTimeout(() => {
+            html2pdf().set(opt).from(element).save();
+        }, 100);
+    }
+</script>
 </body>
 </html>
